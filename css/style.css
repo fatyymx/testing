@@ -1,0 +1,103 @@
+
+.texto-cancion h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.texto-cancion p {
+     color: #cccccc;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+
+/* Carrusel */
+.carrusel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 5px 20px;
+}
+
+.carrusel img {
+    flex: 0 0 auto;
+    width: 280px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 18px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.carrusel img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Scroll minimalista */
+.carrusel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+.card-img {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* Texto oculto */
+.frase {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: bottom 0.4s ease;
+}
+
+/* Cuando se activa */
+.card-img.activa .frase {
+    bottom: 0;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #f1f1f1;
+}
+.footer {
+    text-align: center;
+}
+
+.frase-footer {
+    font-size: 12px;
+    color: #999;
+    font-style: italic;
+    opacity: 0.8;
+}
+
